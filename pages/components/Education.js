@@ -1,5 +1,6 @@
 import { educationData } from '../data'
 
+
 export default function About() {
     return (
         <div class="education">
