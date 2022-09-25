@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import {useRouter} from 'next/router';
 
 
 export default function Meta(...props) {
-    //TODO: What is pathname?
-    const {asPath: pathname} = useRouter();
     return (
     <Head>
         <title>{props['title']}</title>
