@@ -171,3 +171,8 @@ export const socialLinks = [
     { label: 'GoogleScholar', Icon: SiGooglescholar, href: 'https://scholar.google.com/citations?user=nPHuUwwAAAAJ&hl=en' }
 ];
 
+
+export default function DeleteMe () {
+    // TODO: Deploy currently needs this. Can it be removed?
+    return 
+}
