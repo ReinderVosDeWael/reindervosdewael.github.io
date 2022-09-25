@@ -27,11 +27,11 @@ export const metaData = {
 // Hero Data
 export const heroData = {
     imageSrc: heroImage,
-    name: `I'm Reinder.`,
+    name: `I'm Reinder (WIP!).`,
     description: (
         <>
             <p>
-                Great that you're looking at this page! However, it's still a work in progress. 
+                Great that you're looking at this page! However, it's still a <strong>work in progress</strong>. 
                 Please see my LinkedIn profiel for up to date information.
             </p>
             <p>
@@ -123,7 +123,7 @@ export const skillsData = [
 ];
 
 // Education
-export const education = [
+export const educationData = [
     {
         date: '2016',
         location: 'University of Groningen',

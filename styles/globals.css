@@ -27,7 +27,7 @@ a {
 }
 
 .container {
-  padding: 0 2rem;
+  min-width: 480px;
 }
 
 .hero_container {
@@ -35,7 +35,7 @@ a {
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -99,7 +99,7 @@ a {
   position: absolute;
   display: flex;
   column-gap: 3rem;
-  bottom: 0;
+  bottom: 1rem;
 }
 
 .hero_links_container {
@@ -126,21 +126,36 @@ a {
 }
 
 .about {
+  background-color: rgb(50, 50, 50);
+}
+
+.about_content {
   display: grid;
   grid-template-columns: 1fr 4fr;
   row-gap: 1rem;
-  background-color: rgb(50, 50, 50);
   padding: 3rem 0 3rem 0;
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
 }
 
 .about_left {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .about_right {
   position: relative;
   justify-content: left;
+  padding: 0 2rem;
+}
+
+.about_title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.25;
+  color: rgb(255, 255, 255);
 }
 
 .about_profile_image_container {
@@ -149,36 +164,52 @@ a {
   width: 8rem;
   height: 8rem;
   border-radius: 0.75rem;
+  vertical-align: middle;
 }
 
 .about_description {
   width: 100%;
 }
 
-.about_list {
+.about_list_container {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 1rem;
+}
+
+.about_list {
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  columns: 2;
+  line-height: 10rem;
 }
 
 .about_list_item {
   display: flex;
-  align-items: flex-start;
   grid-column: span 1 / span 1;
   column-gap: 0.5rem;
+  margin: 2rem;
 }
 
 .about_labels {
-  color: #ffffff; 
-font-size: 0.875rem;
-line-height: 1.25rem; 
-font-weight: 700; 
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
 }
 
 .about_text {
-  color: #D1D5DB; 
-font-size: 0.875rem;
-line-height: 1.25rem; 
+  color: #D1D5DB;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  vertical-align: center;
+}
+
+.about_icons {
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
 
 }
