@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import { aboutData } from '../data'
+import {forwardRef } from 'react'
 
-export default function About() {
+const About = forwardRef((props, ref) => {
     const profileImageSrc = aboutData['profileImageSrc']
     const description = aboutData['description']
     const aboutItems = aboutData['aboutItems']
-
+    
     return (
-        <div class="about">
+        <div class="about" ref={ref}>
             <div class="about_content">
                 <div class="about_left">
                     <div class="about_profile_image_container">
@@ -41,5 +42,5 @@ export default function About() {
             </div>
         </div>
     )
-
-}
+})
+export default About

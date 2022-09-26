@@ -35,7 +35,7 @@ export const heroData = {
                 Please see my LinkedIn profiel for up to date information.
             </p>
             <p>
-                In my free time time, you can catch me <strong >bouldering</strong>,
+                In my free time time, you can catch me <strong>bouldering</strong>,
                 building hobby <strong>Python projects</strong>, or practicing {' '}
                 <strong>Real Time Strategy games</strong>.
             </p>
@@ -58,14 +58,15 @@ export const heroData = {
 };
 
 // About Section
+const age = new Date(new Date() - new Date('08/26/1993')).getFullYear() - 1970;
 export const aboutData = {
     profileImageSrc: profileImage, 
     description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
     to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
     in.`,
     aboutItems: [
-        { label: 'Location', text: 'the Netherlands', Icon: HiMap },
-        { label: 'Age', text: '29', Icon: HiCalendar },
+        { label: 'Location', text: 'Gouda, the Netherlands', Icon: HiMap },
+        { label: 'Age', text: String(age), Icon: HiCalendar },
         { label: 'Nationality', text: 'Dutch', Icon: HiFlag },
         { label: 'Interests', text: 'Bouldering, Gaming, Programming', Icon: HiSparkles },
         { label: 'Study', text: 'McGill University', Icon: HiAcademicCap },
@@ -125,42 +126,32 @@ export const skillsData = [
 // Education
 export const educationData = [
     {
-        date: '2016',
+        date: '2014-2016',
         location: 'University of Groningen',
         title: 'MSc Behavioral and Cognitive Neuroscience',
-        content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+        content: "I was enrolled in the C-track (cognition) of this Master's program. Part of my training was in the Hyder lab at Yale University. This work led to a scientific publication on the effects of various statistical corrections on MRI signals.",
     },
     {
-        date: '2014',
+        date: '2011-2014',
         location: 'Utrecht University',
         title: 'BSc Liberal Arts and Science',
-        content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+        content: 'At the University College of Utrecht ',
     },
 ];
 
 // Experience
-export const experience = [
+export const experienceData = [
     {
         date: '2022 - Present',
         location: 'Ordina',
         title: 'Software Engineer',
-        content: (
-            <p>
-                Describe work, special projects, notable achievements, what technologies you have been working with, and
-                anything else that would be useful for an employer to know.
-            </p>
-        ),
+        content: "As a member of the Pythoneers team, my goal is to help Ordina's customers get the most out of their Python codebase."
     },
     {
         date: '2017 - 2022',
         location: 'McGill University',
         title: 'PhD Candidate',
-        content: (
-            <p>
-                Describe work, special projects, notable achievements, what technologies you have been working with, and
-                anything else that would be useful for an employer to know.
-            </p>
-        ),
+        content: "My PhD work focussed on the use of statistical methods and machine learning for the understanding of the human brain. This work led to scientific advances in our understanding of the connections of the temporal lobe, as well as open-source toolboxes that allow other researchers to use advanced statistical and manifold learning methods."
     },
 ];
 

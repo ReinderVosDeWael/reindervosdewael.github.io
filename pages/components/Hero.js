@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { UseState } from 'react'
 // import classNames from 'classnames';
 
 import { heroData } from '../data';
@@ -7,11 +8,17 @@ import { BiChevronDownCircle } from "react-icons/bi";
 import { IconContext } from "react-icons";
 
 
-export default function Hero() {
+const Hero = ({aboutRef}) => {
   const imageSrc = heroData['imageSrc']
   const name = heroData['name']
   const description = heroData['description']
   const actions = heroData['actions'] //TODO
+  console.log(aboutRef)
+  const scrollTo = (e) => {
+    e.preventDefault();
+    aboutRef.current.scrollIntoView();
+  }
+
   return (
     <div class="hero_container">
       <Image
@@ -36,7 +43,7 @@ export default function Hero() {
       </div>
       <div class="hero_links_container">
         <a
-          href='www.google.nl'>
+          onClick={e=>scrollTo(e)}>
             <IconContext.Provider value={{ size: 40 }}>
             <BiChevronDownCircle />
             </IconContext.Provider>
@@ -45,3 +52,5 @@ export default function Hero() {
     </div>
   )
 }
+
+export default Hero
