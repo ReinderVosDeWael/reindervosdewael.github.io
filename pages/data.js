@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   HiAcademicCap,
   HiCalendar,
@@ -25,7 +26,7 @@ export const heroData = {
   description: (
     <>
       <p>
-        Great that you're looking at this page! However, it's still a{' '}
+        Great that you are looking at this page! However, it is still a{' '}
         <strong>work in progress</strong>. Please see my LinkedIn profiel for up
         to date information.
       </p>
@@ -56,9 +57,10 @@ export const heroData = {
 const age = new Date(new Date() - new Date('08/26/1993')).getFullYear() - 1970;
 export const aboutData = {
   profileImageSrc: profileImage,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-    to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-    in.`,
+  description: `Use this bio section as your way of describing yourself and 
+  saying what you do, what technologies you like to use or feel most 
+  comfortable with, describing your personality, or whatever else you feel like
+   throwing in.`,
   aboutItems: [
     {label: 'Location', text: 'Gouda, the Netherlands', Icon: HiMap},
     {label: 'Age', text: String(age), Icon: HiCalendar},
@@ -128,7 +130,10 @@ export const educationData = [
     location: 'University of Groningen',
     title: 'MSc Behavioral and Cognitive Neuroscience',
     content:
-      'I was enrolled in the C-track (cognition) of this Master\'s program. Part of my training was in the Hyder lab at Yale University. This work led to a scientific publication on the effects of various statistical corrections on MRI signals.',
+      `I was enrolled in the C-track (cognition) of this Master\'s program. 
+      Part of my training was in the Hyder lab at Yale University. This work
+       led to a scientific publication on the effects of various statistical
+        corrections on MRI signals.`,
   },
   {
     date: '2011-2014',
@@ -145,14 +150,19 @@ export const experienceData = [
     location: 'Ordina',
     title: 'Software Engineer',
     content:
-      'As a member of the Pythoneers team, my goal is to help Ordina\'s customers get the most out of their Python codebase.',
+      `As a member of the Pythoneers team, my goal is to help Ordina\'s 
+      customers get the most out of their Python codebase.`,
   },
   {
     date: '2017 - 2022',
     location: 'McGill University',
     title: 'PhD Candidate',
     content:
-      'My PhD work focussed on the use of statistical methods and machine learning for the understanding of the human brain. This work led to scientific advances in our understanding of the connections of the temporal lobe, as well as open-source toolboxes that allow other researchers to use advanced statistical and manifold learning methods.',
+      `My PhD work focussed on the use of statistical methods and machine 
+      learning for the understanding of the human brain. This work led to 
+      scientific advances in our understanding of the connections of the 
+      temporal lobe, as well as open-source toolboxes that allow other 
+      researchers to use advanced statistical and manifold learning methods.`,
   },
 ];
 
@@ -175,6 +185,9 @@ export const socialLinks = [
   },
 ];
 
+/**
+* npm run deploy complains if this doesn't exist?
+*/
 export default function DeleteMe() {
   // TODO: Deploy currently needs this. Can it be removed?
   return;

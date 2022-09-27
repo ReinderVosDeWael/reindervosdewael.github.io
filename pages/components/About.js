@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 import {aboutData} from '../data';
 import {forwardRef} from 'react';
@@ -43,4 +44,6 @@ const About = forwardRef((props, ref) => {
     </div>
   );
 });
+
+About.displayName = 'About';
 export default About;

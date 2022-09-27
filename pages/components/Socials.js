@@ -1,6 +1,12 @@
 import {socialLinks} from '../data';
 import {IconContext} from 'react-icons';
+import React from 'react';
 
+
+/**
+ * Generates the social media icons.
+ * @return {React.Fragment}
+ */
 export default function Socials() {
   return (
     <>

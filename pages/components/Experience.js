@@ -1,12 +1,17 @@
+import React from 'react';
 import {experienceData} from '../data';
 import {educationData} from '../data';
 
-
+/**
+ * Generates the experience and education sections.
+ * @return {Component}
+ */
 export default function Experience() {
   // const data = [experienceData, educationData]
   // const titles = ["Experience", "Education"]
 
-  // TODO: This could be looped over experience and education to reduce code duplication.
+  // TODO: This could be looped over experience and education to
+  // reduce code duplication.
   return (
     <>
       <div className="experience">
@@ -18,7 +23,7 @@ export default function Experience() {
           </div>
           <div className="experience_right">
             {experienceData.map(({date, location, title, content}) => (
-              <div className="experience_item">
+              <div className="experience_item" key={title}>
                 <h1 className="experience_title">{title}</h1>
                 <span className="experience_location">{location}</span>
                 <span>  •  </span>
@@ -39,7 +44,7 @@ export default function Experience() {
           </div>
           <div className="experience_right">
             {educationData.map(({date, location, title, content}) => (
-              <div className="experience_item">
+              <div className="experience_item" key={title}>
                 <h1 className="experience_title">{title}</h1>
                 <span className="experience_location">{location}</span>
                 <span>  •  </span>
