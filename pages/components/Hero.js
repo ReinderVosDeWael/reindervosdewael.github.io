@@ -1,21 +1,21 @@
 import Image from 'next/image';
-import { forwardRef } from 'react'
+import {forwardRef} from 'react';
 // import classNames from 'classnames';
 
-import { heroData } from '../data';
+import {heroData} from '../data';
 import Socials from './Socials';
-import { BiChevronDownCircle } from "react-icons/bi";
-import { IconContext } from "react-icons";
+import {BiChevronDownCircle} from 'react-icons/bi';
+import {IconContext} from 'react-icons';
 
 
 const Hero = forwardRef((props, ref) => {
-  const imageSrc = heroData['imageSrc']
-  const name = heroData['name']
-  const description = heroData['description']
-  const actions = heroData['actions'] //TODO
+  const imageSrc = heroData['imageSrc'];
+  const name = heroData['name'];
+  const description = heroData['description'];
+  const actions = heroData['actions']; // TODO
 
   return (
-    <div class="hero_container">
+    <div className="hero_container">
       <Image
         alt="hero_image"
         class="hero_image"
@@ -23,30 +23,30 @@ const Hero = forwardRef((props, ref) => {
         objectFit="cover"
         src={imageSrc}
       />
-      <div class="hero_overlay_container">
-        <div class="hero_text_container">
-          <h1 class="hero_text_title">
+      <div className="hero_overlay_container">
+        <div className="hero_text_container">
+          <h1 className="hero_text_title">
             {name}
           </h1>
-          <h2 class="hero_text_description">
+          <h2 className="hero_text_description">
             {description}
           </h2>
         </div>
-        <div class="hero_socials">
+        <div className="hero_socials">
           <Socials />
         </div>
       </div>
-      <div class="hero_links_container">
+      <div className="hero_links_container">
         <a
           aria-label="About"
-          onClick={e => ref.current.scrollIntoView()}>
-          <IconContext.Provider value={{ size: 40 }}>
+          onClick={(e) => ref.current.scrollIntoView()}>
+          <IconContext.Provider value={{size: 40}}>
             <BiChevronDownCircle />
           </IconContext.Provider>
         </a>
       </div>
     </div>
-  )
-})
+  );
+});
 
-export default Hero
+export default Hero;
