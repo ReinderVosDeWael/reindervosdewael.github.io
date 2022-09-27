@@ -1,6 +1,10 @@
+import React from 'react';
 import Head from 'next/head';
-
-
+import PropTypes from 'prop-types';
+/**
+ * Stores the website metadata in the header.
+ * @return {Component}
+ */
 export default function Meta(...props) {
   return (
     <Head>
@@ -14,3 +18,7 @@ export default function Meta(...props) {
     </Head>
   );
 }
+Meta.propTypes = {
+  'title': PropTypes.string.isRequired,
+  'description': PropTypes.string.isRequired,
+};
