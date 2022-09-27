@@ -3,10 +3,10 @@ import { aboutData } from '../data'
 import {forwardRef } from 'react'
 
 const About = forwardRef((props, ref) => {
-    const profileImageSrc = aboutData['profileImageSrc']
-    const description = aboutData['description']
-    const aboutItems = aboutData['aboutItems']
-    
+    const profileImageSrc = aboutData['profileImageSrc'];
+    const description = aboutData['description'];
+    const aboutItems = aboutData['aboutItems'];
+
     return (
         <div class="about" ref={ref}>
             <div class="about_content">

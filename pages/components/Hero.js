@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { UseState } from 'react'
+import { forwardRef } from 'react'
 // import classNames from 'classnames';
 
 import { heroData } from '../data';
@@ -8,16 +8,11 @@ import { BiChevronDownCircle } from "react-icons/bi";
 import { IconContext } from "react-icons";
 
 
-const Hero = ({aboutRef}) => {
+const Hero = forwardRef((props, ref) => {
   const imageSrc = heroData['imageSrc']
   const name = heroData['name']
   const description = heroData['description']
   const actions = heroData['actions'] //TODO
-  console.log(aboutRef)
-  const scrollTo = (e) => {
-    e.preventDefault();
-    aboutRef.current.scrollIntoView();
-  }
 
   return (
     <div class="hero_container">
@@ -43,14 +38,15 @@ const Hero = ({aboutRef}) => {
       </div>
       <div class="hero_links_container">
         <a
-          onClick={e=>scrollTo(e)}>
-            <IconContext.Provider value={{ size: 40 }}>
+          aria-label="About"
+          onClick={e => ref.current.scrollIntoView()}>
+          <IconContext.Provider value={{ size: 40 }}>
             <BiChevronDownCircle />
-            </IconContext.Provider>
+          </IconContext.Provider>
         </a>
       </div>
     </div>
   )
-}
+})
 
 export default Hero
