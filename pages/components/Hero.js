@@ -6,6 +6,7 @@ import {heroData} from '../data';
 import Socials from './Socials';
 import {BiChevronDownCircle} from 'react-icons/bi';
 import {IconContext} from 'react-icons';
+import Div100vh from 'react-div-100vh';
 
 
 /**
@@ -21,7 +22,7 @@ const Hero = forwardRef((props, ref) => {
   // const actions = heroData['actions']; // TODO
 
   return (
-    <div className="hero_container">
+    <Div100vh className="hero_container">
       <Image
         alt="hero_image"
         class="hero_image"
@@ -51,7 +52,7 @@ const Hero = forwardRef((props, ref) => {
           </IconContext.Provider>
         </a>
       </div>
-    </div>
+    </Div100vh>
   );
 });
 Hero.displayName = 'Hero';

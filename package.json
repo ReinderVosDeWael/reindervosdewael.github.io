@@ -15,6 +15,7 @@
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
     "react": "latest",
+    "react-div-100vh": "^0.7.0",
     "react-dom": "latest",
     "react-icons": "^4.4.0"
   },
