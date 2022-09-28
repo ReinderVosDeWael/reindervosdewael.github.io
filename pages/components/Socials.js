@@ -15,7 +15,7 @@ export default function Socials() {
           aria-label={label}
           href={href}
           key={label}>
-          <IconContext.Provider value={{size: 30}}>
+          <IconContext.Provider value={{color: 'white', size: 30}}>
             <Icon/>
           </IconContext.Provider>
         </a>

@@ -185,6 +185,39 @@ export const socialLinks = [
   },
 ];
 
+// Certificates
+export const certificateData = [
+  {
+    date: '2022',
+    location: 'Microsoft',
+    title: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
+    href: 'https://www.credly.com/badges/319adf29-8704-448c-9143-520e8b92f406/public_url',
+    content: `Earners of the Azure Fundamentals certification have demonstrated 
+    foundational level knowledge of cloud services and how those services are 
+    provided with Microsoft Azure.`,
+  },
+  {
+    date: '2022',
+    location: 'Security Journey',
+    title: 'Green Belt for Python Developer',
+    href: 'https://ordina.securityjourney.com/certificates/3afada35-04d0-4efe-a316-1648afa5d772.pdf',
+    content: `Security journey teaches best practices and defensive tactics for 
+    application and product security. Green belt certifies that the candidate 
+    has 1) foundational knowledge of application security, 2) in-depth knowledge
+    of security principles, attacks, tools, and processes, and 3) language 
+    specific AppSec knowledge.`,
+  },
+  {
+    date: '2022',
+    location: 'Udemy',
+    title: 'Tensorflow developer certificate in 2022: Zero to Mastery',
+    href: 'https://www.udemy.com/certificate/UC-7893c02b-4fd3-49cc-b411-a9489a959c7f/',
+    content: `This course offers a complete overview of tensorflow including 
+    neural network regression and classification, computer vision, and natural
+    language processing.`,
+  },
+];
+
 /**
 * npm run deploy complains if this doesn't exist?
 */
