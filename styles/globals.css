@@ -107,17 +107,19 @@ a {
 
 .about_content {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
   row-gap: 1rem;
   padding: 2.5rem 0 2.5rem 0;
   width: 98%;
   margin: auto;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .about_left {
   display: flex;
-  justify-content: center;
+  min-width: 10rem;
+  max-width: 10rem;
+  justify-content: left;
   align-items: center;
 }
 
@@ -186,7 +188,7 @@ a {
 }
 
 .about_text {
-  color: #D1D5DB;
+  color: #d1d5db;
   font-size: 0.875rem;
   line-height: 1.25rem;
   vertical-align: center;
@@ -206,21 +208,21 @@ a {
 
 .experience_content {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
   row-gap: 1rem;
-  padding: 1rem 0 0rem 0;
   width: 98%;
   margin: auto;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .experience_left {
   min-width: 10rem;
+  max-width: 10rem;
 }
 
 .experience_item {
   color: black;
-  padding: 0 0 1rem 0;
+  padding: 0 0 0.1rem 0;
 }
 
 .experience_title {
@@ -238,4 +240,21 @@ a {
   text-decoration: underline;
   text-decoration-color: orange;
   text-decoration-thickness: 0.15rem;
+}
+
+.section_separator {
+  border: 1px solid orange;
+  color: orange;
+  width: 75%;
+}
+
+.credential {
+  background-color: rgba(0, 0, 0, 0.01);
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.2rem;
+  font-weight: 500;
+  border: 2px solid gray;
+  border-radius: 1rem;
+  padding: 0rem 0.4rem 0rem 0.4rem;
 }

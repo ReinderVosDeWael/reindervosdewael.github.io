@@ -8,9 +8,10 @@ import {certificateData} from '../data';
  * @param {Array} data Array containing objects containing the title, location,
  * date, and content of each entry.
  * @param {string} title Title of the section.
+ * @param {boolean} addSeparator If true, adds a separator line at the end.}
  * @return {React.Component}
  */
-function createSection(data, title) {
+function createSection(data, title, addSeparator) {
   return (
     <div className="experience">
       <div className="experience_content">
@@ -18,7 +19,8 @@ function createSection(data, title) {
           <h1 className="section_title">{title}</h1>
         </div>
         <div className="experience_right">
-          {data.map((e) => (createSectionContent(e)))}
+          {data.map((e) => createSectionContent(e))}
+          {addSeparator && <hr className="section_separator" />}
         </div>
       </div>
     </div>
@@ -31,33 +33,27 @@ function createSection(data, title) {
  * @return {React.Component}
  */
 function createSectionContent(e) {
-  if ('href' in e) {
-    return (
-      <div className="experience_right">
-        <div className="experience_item" key={e['title']}>
-          <h1 className="experience_title">{e['title']}</h1>
-          <span className="experience_location">{e['location']}</span>
-          <span> • </span>
-          <span className="experience_date">{e['date']}</span>
-          <span> • </span>
-          <span ><a href={e['href']}>Show credential</a></span>
-          <p>{e['content']}</p>
-        </div>
+  return (
+    <div className="experience_right">
+      <div className="experience_item" key={e['title']}>
+        <h1 className="experience_title">{e['title']}</h1>
+        <span className="experience_location">{e['location']}</span>
+        <span> • </span>
+        <span className="experience_date">{e['date']}</span>
+        {'href' in e && (
+          <>
+            <span> • </span>
+            <span>
+              <a href={e['href']}>
+                <div className="credential">Show credentials</div>
+              </a>
+            </span>
+          </>
+        )}
+        <p>{e['content']}</p>
       </div>
-    );
-  } else {
-    return (
-      <div className="experience_right">
-        <div className="experience_item" key={e['title']}>
-          <h1 className="experience_title">{e['title']}</h1>
-          <span className="experience_location">{e['location']}</span>
-          <span> • </span>
-          <span className="experience_date">{e['date']}</span>
-          <p>{e['content']}</p>
-        </div>
-      </div>
-    );
-  }
+    </div>
+  );
 }
 
 /**
@@ -69,7 +65,10 @@ export default function Experience() {
   const titles = ['Experience', 'Education', 'Certificates'];
   const section = [];
   for (let i = 0; i < allData.length; i++) {
-    section.push(<>{createSection(allData[i], titles[i])}</>);
+    const addSeparator = i !== allData.length - 1;
+    section.push(
+        <>{createSection(allData[i], titles[i], addSeparator)}</>,
+    );
   }
   return section;
 }

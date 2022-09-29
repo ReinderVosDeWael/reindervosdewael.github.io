@@ -25,7 +25,7 @@ const Hero = forwardRef((props, ref) => {
     <Div100vh className="hero_container">
       <Image
         alt="hero_image"
-        class="hero_image"
+        className="hero_image"
         layout="fill"
         objectFit="cover"
         src={imageSrc}
