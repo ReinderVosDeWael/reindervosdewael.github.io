@@ -44,7 +44,7 @@ const Hero = function() {
       <div className="hero_links_container">
         <a
           aria-label="About"
-          href="http://localhost:3000/#about"
+          href="about"
           key="About">
           <IconContext.Provider value={{size: 40, color: 'white'}}>
             <BiChevronDownCircle />
