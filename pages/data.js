@@ -57,6 +57,7 @@ export const heroData = {
 const age = new Date(new Date() - new Date('08/26/1993')).getFullYear() - 1970;
 export const aboutData = {
   profileImageSrc: profileImage,
+  name: 'Reinder Vos de Wael, PhD',
   description: `Use this bio section as your way of describing yourself and 
   saying what you do, what technologies you like to use or feel most 
   comfortable with, describing your personality, or whatever else you feel like
@@ -129,11 +130,10 @@ export const educationData = [
     date: '2014-2016',
     location: 'University of Groningen',
     title: 'MSc Behavioral and Cognitive Neuroscience',
-    content:
-      `I was enrolled in the C-track (cognition) of this Master\'s program. 
-      Part of my training was in the Hyder lab at Yale University. This work
-       led to a scientific publication on the effects of various statistical
-        corrections on MRI signals.`,
+    content: `I was enrolled in the C-track (cognition) of this Master\'s 
+    program. Part of my training was in the Hyder lab at Yale University. 
+    This work led to a scientific publication on the effects of various 
+    statistical corrections on MRI signals.`,
   },
   {
     date: '2011-2014',
@@ -149,17 +149,15 @@ export const experienceData = [
     date: '2022 - Present',
     location: 'Ordina',
     title: 'Software Engineer',
-    content:
-      `As a member of the Pythoneers team, my goal is to help Ordina\'s 
+    content: `As a member of the Pythoneers team, my goal is to help Ordina\'s 
       customers get the most out of their Python codebase.`,
   },
   {
     date: '2017 - 2022',
     location: 'McGill University',
     title: 'PhD Candidate',
-    content:
-      `My PhD work focussed on the use of statistical methods and machine 
-      learning for the understanding of the human brain. This work led to 
+    content: `My PhD work focussed on the use of statistical methods and 
+    machine learning for the understanding of the human brain. This work led to 
       scientific advances in our understanding of the connections of the 
       temporal lobe, as well as open-source toolboxes that allow other 
       researchers to use advanced statistical and manifold learning methods.`,
@@ -212,15 +210,26 @@ export const certificateData = [
     location: 'Udemy',
     title: 'Tensorflow developer certificate in 2022: Zero to Mastery',
     href: 'https://www.udemy.com/certificate/UC-7893c02b-4fd3-49cc-b411-a9489a959c7f/',
-    content: `This course offers a complete overview of tensorflow including 
-    neural network regression and classification, computer vision, and natural
-    language processing.`,
+    content: `This course offers a complete hands-on tutorial of tensorflow 
+    including neural network regression and classification, computer vision, 
+    and natural language processing.`,
+  },
+];
+
+export const NavbarData = [
+  {
+    label: 'About',
+    href: '#about',
+  },
+  {
+    label: 'Resume',
+    href: '#resume',
   },
 ];
 
 /**
-* npm run deploy complains if this doesn't exist?
-*/
+ * npm run deploy complains if this doesn't exist?
+ */
 export default function DeleteMe() {
   // TODO: Deploy currently needs this. Can it be removed?
   return;

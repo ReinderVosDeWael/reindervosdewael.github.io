@@ -4,7 +4,7 @@ import {educationData} from '../data';
 import {certificateData} from '../data';
 
 /**
- * Creates an experience section.
+ * Creates a resume section.
  * @param {Array} data Array containing objects containing the title, location,
  * date, and content of each entry.
  * @param {string} title Title of the section.
@@ -13,15 +13,13 @@ import {certificateData} from '../data';
  */
 function createSection(data, title, addSeparator) {
   return (
-    <div className="experience">
-      <div className="experience_content">
-        <div className="experience_left">
-          <h1 className="section_title">{title}</h1>
-        </div>
-        <div className="experience_right">
-          {data.map((e) => createSectionContent(e))}
-          {addSeparator && <hr className="section_separator" />}
-        </div>
+    <div className="resume_content">
+      <div className="resume_left">
+        <h1 className="section_title">{title}</h1>
+      </div>
+      <div className="resume_right">
+        {data.map((e) => createSectionContent(e))}
+        {addSeparator && <hr className="section_separator" />}
       </div>
     </div>
   );
@@ -34,12 +32,12 @@ function createSection(data, title, addSeparator) {
  */
 function createSectionContent(e) {
   return (
-    <div className="experience_right">
-      <div className="experience_item" key={e['title']}>
-        <h1 className="experience_title">{e['title']}</h1>
-        <span className="experience_location">{e['location']}</span>
+    <div className="resume_right">
+      <div className="resume_item" key={e['title']}>
+        <h1 className="resume_title">{e['title']}</h1>
+        <span className="resume_location">{e['location']}</span>
         <span> • </span>
-        <span className="experience_date">{e['date']}</span>
+        <span className="resume_date">{e['date']}</span>
         {'href' in e && (
           <>
             <span> • </span>
@@ -50,7 +48,7 @@ function createSectionContent(e) {
             </span>
           </>
         )}
-        <p>{e['content']}</p>
+        <p className='resume_description'>{e['content']}</p>
       </div>
     </div>
   );
@@ -60,15 +58,17 @@ function createSectionContent(e) {
  * Generates the experience and education sections.
  * @return {Component}
  */
-export default function Experience() {
+export default function Resume() {
   const allData = [experienceData, educationData, certificateData];
   const titles = ['Experience', 'Education', 'Certificates'];
   const section = [];
   for (let i = 0; i < allData.length; i++) {
     const addSeparator = i !== allData.length - 1;
-    section.push(
-        <>{createSection(allData[i], titles[i], addSeparator)}</>,
-    );
+    section.push(<>{createSection(allData[i], titles[i], addSeparator)}</>);
   }
-  return section;
+  return (
+    <div className="resume" id="resume">
+      {section}
+    </div>
+  );
 }

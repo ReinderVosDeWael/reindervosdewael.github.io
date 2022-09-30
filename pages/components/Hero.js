@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, {forwardRef} from 'react';
+import React from 'react';
 // import classNames from 'classnames';
 
 import {heroData} from '../data';
@@ -11,18 +11,16 @@ import Div100vh from 'react-div-100vh';
 
 /**
  * Creates the hero image.
- * @param {HTMLButtonElement} props ?? TODO: TYPE IS WRONG
- * @param {RefObject} ref Reference to the about section.
  * @return {Component}
  */
-const Hero = forwardRef((props, ref) => {
+const Hero = function() {
   const imageSrc = heroData['imageSrc'];
   const name = heroData['name'];
   const description = heroData['description'];
   // const actions = heroData['actions']; // TODO
 
   return (
-    <Div100vh className="hero_container">
+    <Div100vh className="hero_container" id='hero'>
       <Image
         alt="hero_image"
         className="hero_image"
@@ -46,15 +44,16 @@ const Hero = forwardRef((props, ref) => {
       <div className="hero_links_container">
         <a
           aria-label="About"
-          onClick={(e) => ref.current.scrollIntoView()}>
-          <IconContext.Provider value={{size: 40}}>
+          href="http://localhost:3000/#about"
+          key="About">
+          <IconContext.Provider value={{size: 40, color: 'white'}}>
             <BiChevronDownCircle />
           </IconContext.Provider>
         </a>
       </div>
     </Div100vh>
   );
-});
+};
 Hero.displayName = 'Hero';
 
 export default Hero;

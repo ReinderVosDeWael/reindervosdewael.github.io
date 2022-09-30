@@ -1,24 +1,36 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
+import {metaData} from '../data';
+
+/**
+ * @return {function} function that sets the base URL.
+ */
+function getBaseUrl() {
+  const url =
+    window.location.protocol +
+    '//' +
+    window.location.hostname +
+    (window.location.port ? ':' + window.location.port : '');
+  return () => {
+    <base href={url} />;
+  };
+};
+
 /**
  * Stores the website metadata in the header.
  * @return {Component}
  */
-export default function Meta(...props) {
+export default function Meta() {
   return (
     <Head>
-      <title>{props['title']}</title>
-      <meta name="description" content={props['description']} />
+      {useEffect(getBaseUrl)}
+      <title>{metaData['title']}</title>
+      <meta name="description" content={metaData['description']} />
       <link rel="icon" href="/favicon.ico" />
 
       {/* Twitter: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup */}
-      <meta content={props['title']} name="twitter:title" />
-      <meta content={props['description']} name="twitter:description" />
+      <meta content={metaData['title']} name="twitter:title" />
+      <meta content={metaData['description']} name="twitter:description" />
     </Head>
   );
 }
-Meta.propTypes = {
-  'title': PropTypes.string.isRequired,
-  'description': PropTypes.string.isRequired,
-};
