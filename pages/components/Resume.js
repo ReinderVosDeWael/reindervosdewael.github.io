@@ -13,11 +13,11 @@ import {certificateData} from '../data';
  */
 function createSection(data, title, addSeparator) {
   return (
-    <div className="resume_content">
-      <div className="resume_left">
+    <div className="base_content">
+      <div className="base_content_left">
         <h1 className="section_title">{title}</h1>
       </div>
-      <div className="resume_right">
+      <div className="base_content_right">
         {data.map((e) => createSectionContent(e))}
         {addSeparator && <hr className="section_separator" />}
       </div>

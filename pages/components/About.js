@@ -9,8 +9,8 @@ const About = function() {
 
   return (
     <div className="about" id="about">
-      <div className="about_content">
-        <div className="about_left">
+      <div className="base_content about_content">
+        <div className="base_content_left about_left">
           <div className="about_profile_image_container">
             <Image src={profileImageSrc} alt="Profile Image" />
           </div>

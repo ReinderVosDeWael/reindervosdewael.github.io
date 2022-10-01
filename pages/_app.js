@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import '../styles/globals.css';
+import '../styles/styles.css';
 
 /**
  * I don't know what this does.
