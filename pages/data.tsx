@@ -54,7 +54,8 @@ export const heroData = {
 };
 
 // About Section
-const age = new Date(+new Date() - +new Date('08/26/1993')).getFullYear() - 1970;
+const age =
+  new Date(+new Date() - +new Date('08/26/1993')).getFullYear() - 1970;
 export const aboutData = {
   profileImageSrc: profileImage,
   name: 'Reinder Vos de Wael, PhD',
@@ -130,7 +131,7 @@ export const educationData = [
     date: '2014-2016',
     location: 'University of Groningen',
     title: 'MSc Behavioral and Cognitive Neuroscience',
-    content: `I was enrolled in the C-track (cognition) of this Master\'s 
+    content: `I was enrolled in the C-track (cognition) of this Master's 
     program. Part of my training was in the Hyder lab at Yale University. 
     This work led to a scientific publication on the effects of various 
     statistical corrections on MRI signals.`,
@@ -149,7 +150,7 @@ export const experienceData = [
     date: '2022 - Present',
     location: 'Ordina',
     title: 'Software Engineer',
-    content: `As a member of the Pythoneers team, my goal is to help Ordina\'s 
+    content: `As a member of the Pythoneers team, my goal is to help Ordina's 
       customers get the most out of their Python codebase.`,
   },
   {

@@ -3,8 +3,11 @@ import {experienceData} from '../data';
 import {educationData} from '../data';
 import {certificateData} from '../data';
 
-
-function createSection(data: Array<object>, title: string, addSeparator: boolean) {
+function createSection(
+    data: Array<object>,
+    title: string,
+    addSeparator: boolean,
+) {
   return (
     <div className="base_content">
       <div className="base_content_left">
@@ -36,7 +39,7 @@ function createSectionContent(e: object) {
             </span>
           </>
         )}
-        <p className='resume_description'>{e['content']}</p>
+        <p className="resume_description">{e['content']}</p>
       </div>
     </div>
   );
