@@ -81,32 +81,35 @@ export const aboutData = {
 // Levels are out of 10
 export const skillsData = [
   {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'Dutch',
-        level: 10,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
+    name: 'Languages',
     skills: [
       {
         name: 'Python',
-        level: 8,
+        level: 9,
       },
       {
-        name: 'MATLAB',
-        level: 8,
-      },
-      {
-        name: 'Bash',
+        name: 'Shell',
         level: 6,
+      },
+      {
+        name: 'Typescript',
+        level: 5,
+      },
+    ],
+  },
+  {name: 'Packages',
+    skills: [
+      {
+        name: 'Numpy',
+        level: 8,
+      },
+      {
+        name: 'Pandas',
+        level: 6,
+      },
+      {
+        name: 'Tensorflow',
+        level: 5,
       },
     ],
   },
@@ -118,8 +121,29 @@ export const skillsData = [
         level: 6,
       },
       {
-        name: 'Tensorflow',
-        level: 6,
+        name: 'Continuous Integration',
+        level: 5,
+      },
+      {
+        name: 'Azure',
+        level: 3,
+      },
+    ],
+  },
+  {
+    name: 'Domain Knowledge',
+    skills: [
+      {
+        name: 'Image Processing',
+        level: 8,
+      },
+      {
+        name: 'Statistics',
+        level: 7,
+      },
+      {
+        name: 'Machine Learning',
+        level: 6.5,
       },
     ],
   },

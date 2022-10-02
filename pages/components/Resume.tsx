@@ -2,8 +2,9 @@ import React from 'react';
 import {experienceData} from '../data';
 import {educationData} from '../data';
 import {certificateData} from '../data';
+import {skillsData} from '../data';
 
-function createSection(
+function createExperienceSection(
     data: Array<object>,
     title: string,
     addSeparator: boolean,
@@ -14,14 +15,14 @@ function createSection(
         <h1 className="section_title">{title}</h1>
       </div>
       <div className="base_content_right">
-        {data.map((e: object) => createSectionContent(e))}
+        {data.map((e: object) => createExperienceSectionContent(e))}
         {addSeparator && <hr className="section_separator" />}
       </div>
     </div>
   );
 }
 
-function createSectionContent(e: object) {
+function createExperienceSectionContent(e: object) {
   return (
     <div className="resume_right">
       <div className="resume_item" key={e['title']}>
@@ -45,21 +46,55 @@ function createSectionContent(e: object) {
   );
 }
 
-/**
- * Generates the experience and education sections.
- * @return {Component}
- */
+function skillsSection() {
+  const skills: JSX.Element[][] = [];
+  for (let i = 0; i < skillsData.length; i++) {
+    const skillSet = skillsData[i];
+    skills.push([<p className="skillset_name" key={i}>{skillSet['name']}</p>]);
+    skills.push(
+        skillSet['skills'].map(({name, level}, idx) => {
+          return skill(name, level);
+        }),
+    );
+  }
+
+  return (
+    <div className="base_content">
+      <div className="base_content_left">
+        <h1 className="section_title">Skills</h1>
+      </div>
+      <div className="base_content_right">
+        <div className="skills_content_right">{skills}</div>
+      </div>
+    </div>
+  );
+}
+
+function skill(skillName: string, level: number, max = 10) {
+  const percentage = Math.round(level / max * 100);
+  return (
+    <div className="skill_container">
+      <span className="skill_name">{skillName}</span>
+      <div className="skill_bottom_bar">
+        <div className="skill_top_bar" style={{width: `${percentage}%`}} />
+      </div>
+    </div>
+  );
+}
+
 export default function Resume() {
   const allData = [experienceData, educationData, certificateData];
   const titles = ['Experience', 'Education', 'Certificates'];
-  const section: JSX.Element[] = [];
+  const experienceSection: JSX.Element[] = [];
   for (let i = 0; i < allData.length; i++) {
-    const addSeparator = i !== allData.length - 1;
-    section.push(<>{createSection(allData[i], titles[i], addSeparator)}</>);
+    experienceSection.push(
+        <>{createExperienceSection(allData[i], titles[i], true)}</>,
+    );
   }
   return (
     <div className="resume" id="resume">
-      {section}
+      {experienceSection}
+      {skillsSection()}
     </div>
   );
 }

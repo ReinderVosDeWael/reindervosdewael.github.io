@@ -60,7 +60,6 @@ button:focus {
   height: 3rem;
 }
 
-
 @media screen and (max-width: 450px) {
   .mobile_navbar {
     display: flex;
@@ -266,10 +265,10 @@ button:focus {
 .resume {
   padding: var(--section_padding) 0 0 0;
   background-color: white;
+  color: black;
 }
 
 .resume_item {
-  color: black;
   padding: 0 0 0.1rem 0;
 }
 
@@ -287,7 +286,6 @@ button:focus {
 }
 
 .section_title {
-  color: black;
   font-size: 1.5rem;
   text-decoration: underline;
   text-decoration-color: var(--accent_color);
@@ -309,4 +307,47 @@ button:focus {
   border: 2px solid gray;
   border-radius: 1rem;
   padding: 0rem 0.4rem 0rem 0.4rem;
+}
+
+.skills_content_right {
+  grid-template-columns: 1fr 1fr;
+  columns: 2;
+  gap: 3rem;
+  padding: 1rem 0 3rem 0;
+}
+
+@media screen and (max-width: 767px) {
+  .skills_content_right {
+    columns: 1;
+  }
+}
+
+.skill_container {
+  flex-direction: column;
+}
+
+.skillset_name {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.skill_name {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skill_bottom_bar {
+  overflow: hidden;
+  height: 1.25rem;
+  border-radius: 9999px;
+  background-color: gray;
+}
+
+.skill_top_bar {
+  height: 100%;
+  border-radius: 9999px;
+  background-color: var(--accent_color);
 }
