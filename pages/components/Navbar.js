@@ -43,7 +43,7 @@ function mobileNavBar() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}>
-        <IconContext.Provider value={{size: 30, color: 'white'}}>
+        <IconContext.Provider value={{size: 50, color: 'white'}}>
           <HiMenu />
         </IconContext.Provider>
       </Button>
@@ -58,7 +58,7 @@ function mobileNavBar() {
         {NavbarData.map(({label, href}, idx) => {
           return (
             <a href={href} key={idx}>
-              <MenuItem onClick={handleClose}>{label}</MenuItem>
+              <MenuItem onClick={handleClose}><h3>{label}</h3></MenuItem>
             </a>
           );
         })}
