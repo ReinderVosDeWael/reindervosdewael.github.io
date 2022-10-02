@@ -8,6 +8,9 @@
     "test": "npx eslint --fix ."
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.7",
     "eslint": "^8.24.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",

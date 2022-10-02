@@ -6,6 +6,9 @@ import Meta from './components/Meta';
 import Navbar from './components/Navbar';
 import Resume from './components/Resume';
 
+import {ThemeProvider, createTheme} from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
 // Say hello to the people digging under the hood :).
 console.log(
     `%cWell... you\'re digging into the code of my website, eh? :-) 
@@ -15,6 +18,12 @@ https://github.com/ReinderVosDeWael/ReinderVosDeWael.github.io.`,
     'font-size: large',
 );
 
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
 /**
  * Parent component for the website.
  * @return {React.Component}
@@ -22,11 +31,14 @@ https://github.com/ReinderVosDeWael/ReinderVosDeWael.github.io.`,
 export default function Home() {
   return (
     <div className="container">
-      <Meta />
-      <Navbar />
-      <Hero />
-      <About />
-      <Resume />
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        <Meta />
+        <Navbar />
+        <Hero />
+        <About />
+        <Resume />
+      </ThemeProvider>
     </div>
   );
 }
