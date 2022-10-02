@@ -1,4 +1,4 @@
-import {React} from 'react';
+import React, {FC} from 'react';
 
 import About from './components/About';
 import Hero from './components/Hero';
@@ -24,10 +24,6 @@ const darkTheme = createTheme({
   },
 });
 
-/**
- * Parent component for the website.
- * @return {React.Component}
- */
 export default function Home() {
   return (
     <div className="container">

@@ -3,10 +3,6 @@ import {IconContext} from 'react-icons';
 import React from 'react';
 
 
-/**
- * Generates the social media icons.
- * @return {React.Fragment}
- */
 export default function Socials() {
   return (
     <>
@@ -15,7 +11,7 @@ export default function Socials() {
           aria-label={label}
           href={href}
           key={label}>
-          <IconContext.Provider value={{color: 'white', size: 30}}>
+          <IconContext.Provider value={{color: 'white', size: "30"}}>
             <Icon/>
           </IconContext.Provider>
         </a>

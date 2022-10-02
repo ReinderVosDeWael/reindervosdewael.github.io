@@ -54,7 +54,7 @@ export const heroData = {
 };
 
 // About Section
-const age = new Date(new Date() - new Date('08/26/1993')).getFullYear() - 1970;
+const age = new Date(+new Date() - +new Date('08/26/1993')).getFullYear() - 1970;
 export const aboutData = {
   profileImageSrc: profileImage,
   name: 'Reinder Vos de Wael, PhD',

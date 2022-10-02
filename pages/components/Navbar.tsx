@@ -7,7 +7,6 @@ import MenuItem from '@mui/material/MenuItem';
 
 import {NavbarData} from '../data';
 
-// Desktop navbar simply uses section labels.
 const desktopNavBar = (
   <div className="base_navbar desktop_navbar">
     {NavbarData.map(({label, href}, idx) => {
@@ -22,9 +21,7 @@ const desktopNavBar = (
   </div>
 );
 
-/** Mobile navbar uses a dropdown menu.
- * @return {Component}
- */
+
 function mobileNavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -43,7 +40,7 @@ function mobileNavBar() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}>
-        <IconContext.Provider value={{size: 50, color: 'white'}}>
+        <IconContext.Provider value={{size: '50', color: 'white'}}>
           <HiMenu />
         </IconContext.Provider>
       </Button>
@@ -67,10 +64,6 @@ function mobileNavBar() {
   );
 }
 
-/**
- * Creats a navigation bar.
- * @return {React.Component}
- */
 export default function Navbar() {
   return (
     <>

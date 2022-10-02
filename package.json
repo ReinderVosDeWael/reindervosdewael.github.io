@@ -20,7 +20,9 @@
     "react": "latest",
     "react-div-100vh": "^0.7.0",
     "react-dom": "latest",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "source-map-loader": "^4.0.0",
+    "ts-loader": "^9.4.1"
   },
   "devDependencies": {
     "eslint-config-google": "^0.14.0",

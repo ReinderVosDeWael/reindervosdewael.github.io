@@ -46,7 +46,7 @@ const Hero = function() {
           aria-label="About"
           href="#about"
           key="About">
-          <IconContext.Provider value={{size: 40, color: 'white'}}>
+          <IconContext.Provider value={{size: "40", color: 'white'}}>
             <BiChevronDownCircle />
           </IconContext.Provider>
         </a>
