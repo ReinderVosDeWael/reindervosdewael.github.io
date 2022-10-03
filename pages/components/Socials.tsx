@@ -1,4 +1,4 @@
-import {socialLinks} from '../data';
+import {socialLinks} from '../data/data';
 import {IconContext} from 'react-icons';
 import React from 'react';
 

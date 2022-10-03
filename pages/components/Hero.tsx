@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 // import classNames from 'classnames';
 
-import {heroData} from '../data';
+import {heroData} from '../data/data';
 import Socials from './Socials';
 import {BiChevronDownCircle} from 'react-icons/bi';
 import {IconContext} from 'react-icons';

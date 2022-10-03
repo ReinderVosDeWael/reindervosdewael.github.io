@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-import {NavbarData} from '../data';
+import {NavbarData} from '../data/data';
 
 const desktopNavBar = (
   <div className="base_navbar desktop_navbar">

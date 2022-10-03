@@ -1,8 +1,8 @@
 import React from 'react';
-import {experienceData} from '../data';
-import {educationData} from '../data';
-import {certificateData} from '../data';
-import {skillsData} from '../data';
+import {experienceData} from '../data/data';
+import {educationData} from '../data/data';
+import {certificateData} from '../data/data';
+import {skillsData} from '../data/data';
 
 function createExperienceSection(
     data: Array<object>,

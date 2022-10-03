@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import {aboutData} from '../data';
+import {aboutData} from '../data/data';
 
 const About = function() {
   const profileImageSrc = aboutData['profileImageSrc'];

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import Head from 'next/head';
-import {metaData} from '../data';
+import {metaData} from '../data/data';
 
 function getBaseUrl() {
   const url =

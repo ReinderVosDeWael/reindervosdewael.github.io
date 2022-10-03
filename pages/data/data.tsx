@@ -10,7 +10,10 @@ import {
 } from 'react-icons/hi';
 import {SiGithub, SiGooglescholar, SiLinkedin} from 'react-icons/si';
 
+import brainspaceImage from '/assets/brainspace_logo.png';
+import brainstatImage from '/assets/brainstat_logo.png';
 import heroImage from '/assets/dalle_hero.png';
+import projectsImage from '/assets/dalle_projects.png';
 import profileImage from '/assets/profile.png';
 
 // Page Data
@@ -265,4 +268,39 @@ export const NavbarData = [
     label: 'Resume',
     href: '#resume',
   },
+  {
+    label: 'Projects',
+    href: '#projects',
+  },
 ];
+
+
+export const projectsData = {
+  'imageSrc': projectsImage,
+  'projects': [
+    {
+      name: 'BrainSpace',
+      href: 'https://brainspace.readthedocs.io/en/latest/',
+      role: 'Lead Developer',
+      date: '2019-present',
+      description: 'BrainSpace is awesome.',
+      imageSrc: brainspaceImage,
+    },
+    {
+      name: 'Resume website',
+      href: 'https://reindervosdewael.github.io/',
+      role: 'Solo Developer',
+      date: '2022-present',
+      description: `Well... You're looking at it :-).`,
+      imageSrc: heroImage,
+    },
+    {
+      name: 'BrainStat',
+      href: 'https://brainstat.readthedocs.io/en/latest/',
+      role: 'Lead Developer',
+      date: '2020-2022',
+      description: `BrainStat is also awesome.`,
+      imageSrc: brainstatImage,
+    },
+  ]
+}
