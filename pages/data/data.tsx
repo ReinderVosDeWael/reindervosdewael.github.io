@@ -30,8 +30,8 @@ export const heroData = {
     <>
       <p>
         I am a software engineer based in the Netherlands, currently{' '}
-        working at <strong>Ordina</strong> to help bring Python solutions{' '}
-        to its customers.
+        working at{' '}
+        <strong>Ordina</strong> to help bring Python solutions to its customers.
       </p>
       <p>
         In my free time, you can catch me <strong>Bouldering</strong>, building
@@ -274,10 +274,9 @@ export const NavbarData = [
   },
 ];
 
-
 export const projectsData = {
-  'imageSrc': projectsImage,
-  'projects': [
+  imageSrc: projectsImage,
+  projects: [
     {
       name: 'BrainSpace',
       href: 'https://brainspace.readthedocs.io/en/latest/',
@@ -285,6 +284,7 @@ export const projectsData = {
       date: '2019-present',
       description: 'BrainSpace is awesome.',
       imageSrc: brainspaceImage,
+      tools: 'Python, MATLAB, Git',
     },
     {
       name: 'Resume website',
@@ -293,6 +293,7 @@ export const projectsData = {
       date: '2022-present',
       description: `Well... You're looking at it :-).`,
       imageSrc: heroImage,
+      tools: 'Typescript, CSS, React, Git',
     },
     {
       name: 'BrainStat',
@@ -301,6 +302,7 @@ export const projectsData = {
       date: '2020-2022',
       description: `BrainStat is also awesome.`,
       imageSrc: brainstatImage,
+      tools: 'Python, MATLAB, Git',
     },
-  ]
-}
+  ],
+};
