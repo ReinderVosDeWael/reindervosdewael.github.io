@@ -53,7 +53,7 @@ function skillsSection() {
     skills.push([<p className="skillset_name" key={i}>{skillSet['name']}</p>]);
     skills.push(
         skillSet['skills'].map(({name, level}, idx) => {
-          return skill(name, level);
+          return skill(name, level, idx);
         }),
     );
   }
@@ -70,10 +70,10 @@ function skillsSection() {
   );
 }
 
-function skill(skillName: string, level: number, max = 10) {
+function skill(skillName: string, level: number, key, max = 10) {
   const percentage = Math.round(level / max * 100);
   return (
-    <div className="skill_container">
+    <div className="skill_container" key={key}>
       <span className="skill_name">{skillName}</span>
       <div className="skill_bottom_bar">
         <div className="skill_top_bar" style={{width: `${percentage}%`}} />

@@ -16,23 +16,23 @@ import profileImage from '/assets/profile.png';
 // Page Data
 export const metaData = {
   title: 'Reinder Vos de Wael, PhD',
-  description: 'Resume of Reinder Vos de Wael, PhD',
+  description: 'Resume website of Reinder Vos de Wael, PhD',
 };
 
 // Hero Data
 export const heroData = {
   imageSrc: heroImage,
-  name: `I'm Reinder (WIP!).`,
+  name: `I'm Reinder.`,
   description: (
     <>
       <p>
-        Great that you are looking at this page! However, it is still a{' '}
-        <strong>work in progress</strong>. Please see my LinkedIn profiel for up
-        to date information.
+        I am a software engineer based in the Netherlands, currently{' '}
+        working at <strong>Ordina</strong> to help bring Python solutions{' '}
+        to its customers.
       </p>
       <p>
-        In my free time time, you can catch me <strong>bouldering</strong>,
-        building hobby <strong>Python projects</strong>, or practicing{' '}
+        In my free time, you can catch me <strong>Bouldering</strong>, building
+        small <strong>Python Projects</strong>, or practicing{' '}
         <strong>Real Time Strategy games</strong>.
       </p>
     </>
@@ -59,10 +59,22 @@ const age =
 export const aboutData = {
   profileImageSrc: profileImage,
   name: 'Reinder Vos de Wael, PhD',
-  description: `Use this bio section as your way of describing yourself and 
-  saying what you do, what technologies you like to use or feel most 
-  comfortable with, describing your personality, or whatever else you feel like
-   throwing in.`,
+  description: (
+    <>
+      <p>
+        {`I love solving analytical problems. I leverage 
+  statistical and computational models to solve complex challenges. To 
+  accomplish this, I combine statistics, machine learning, and 
+  domain-specific knowledge for a targetted solution.`}
+      </p>
+      <p>
+        {`I have had the privilege of graduating with a PhD in Neuroscience 
+  from McGill University. During this PhD I've had extensive experience with 
+  software development and deployment, creating and testing novel hypotheses
+  in a fast-moving scientific field.`}
+      </p>
+    </>
+  ),
   aboutItems: [
     {label: 'Location', text: 'Gouda, the Netherlands', Icon: HiMap},
     {label: 'Age', text: String(age), Icon: HiCalendar},
@@ -97,7 +109,8 @@ export const skillsData = [
       },
     ],
   },
-  {name: 'Packages',
+  {
+    name: 'Packages',
     skills: [
       {
         name: 'Numpy',
@@ -164,7 +177,9 @@ export const educationData = [
     date: '2011-2014',
     location: 'Utrecht University',
     title: 'BSc Liberal Arts and Science',
-    content: 'At the University College of Utrecht ',
+    content: `My studies at the University of Utrecht focussed on neuroscience
+    and molecular cell biology. My Bachelor's thesis was written on which
+    nerves in the human eye process cues from which areas of the visual field.`,
   },
 ];
 
@@ -251,11 +266,3 @@ export const NavbarData = [
     href: '#resume',
   },
 ];
-
-/**
- * npm run deploy complains if this doesn't exist?
- */
-export default function DeleteMe() {
-  // TODO: Deploy currently needs this. Can it be removed?
-  return;
-}
