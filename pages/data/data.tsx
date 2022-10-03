@@ -29,7 +29,8 @@ export const heroData = {
   description: (
     <>
       <p>
-        I am a software engineer based in the Netherlands, currently working at{' '}
+        I am a software engineer based in the Netherlands, currently{' '}
+        working at{' '}
         <strong>Ordina</strong> to help bring Python solutions to its customers.
       </p>
       <p>
