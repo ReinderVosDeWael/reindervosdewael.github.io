@@ -20,6 +20,7 @@
     "jsx": "preserve"
   },
   "include": [
+    "pages/react-app-env.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
