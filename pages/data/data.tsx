@@ -10,10 +10,10 @@ import {
 } from 'react-icons/hi';
 import {SiGithub, SiGooglescholar, SiLinkedin} from 'react-icons/si';
 
-import brainspaceImage from '/assets/brainspace_logo.png';
-import brainstatImage from '/assets/brainstat_logo.png';
+// import brainspaceImage from '/assets/brainspace_logo.png';
+// import brainstatImage from '/assets/brainstat_logo.png';
 import heroImage from '/assets/dalle_hero.png';
-import projectsImage from '/assets/dalle_projects.png';
+// import projectsImage from '/assets/dalle_projects.png';
 import profileImage from '/assets/profile.png';
 
 // Page Data
@@ -274,6 +274,7 @@ export const NavbarData = [
   },
 ];
 
+/**
 export const projectsData = {
   imageSrc: projectsImage,
   projects: [
@@ -306,3 +307,4 @@ export const projectsData = {
     },
   ],
 };
+ */
