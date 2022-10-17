@@ -229,9 +229,21 @@ export const socialLinks = [
 // Certificates
 export const certificateData = [
   {
+    date: '2022 (expires Oct 2023)',
+    location: 'Microsoft',
+    title: 'Azure Developer Associate (AZ-204)',
+    href: 'https://www.credly.com/badges/cc3cb9fc-84ec-40ef-a685-28e13c913621',
+    content: `Earning Azure Developer Associate certification validates 
+     the skills and knowledge to design, build, test, and maintain cloud 
+     applications and services on Microsoft Azure. Candidates participate 
+     in all phases of cloud development from requirements definition and 
+     design, to development, deployment, and maintenance.
+    `,
+  },
+  {
     date: '2022',
     location: 'Microsoft',
-    title: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
+    title: 'Azure Fundamentals (AZ-900)',
     href: 'https://www.credly.com/badges/319adf29-8704-448c-9143-520e8b92f406/public_url',
     content: `Earners of the Azure Fundamentals certification have demonstrated 
     foundational level knowledge of cloud services and how those services are 
