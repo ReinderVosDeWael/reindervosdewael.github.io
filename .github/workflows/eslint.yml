@@ -11,7 +11,11 @@ name: ESLint
 
 on:
   push:
+    branches:
+    - main
   pull_request:
+    branches:
+    - main
 
 jobs:
   eslint:
