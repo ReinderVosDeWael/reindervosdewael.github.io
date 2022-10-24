@@ -9,11 +9,11 @@ import Resume from './components/Resume';
 export default function Home() {
   return (
     <div className="container">
-        <Meta />
-        <Navbar />
-        <Hero />
-        <About />
-        <Resume />
+      <Meta/>
+      <Navbar/>
+      <Hero/>
+      <About/>
+      <Resume/>
     </div>
   );
 }
