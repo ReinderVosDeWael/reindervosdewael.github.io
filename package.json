@@ -11,10 +11,7 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.10",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
     "next": "latest",
-    "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
     "react": "latest",
     "react-div-100vh": "^0.7.0",
@@ -29,7 +26,10 @@
     "@typescript-eslint/parser": "^5.39.0",
     "eslint": "^8.25.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-react": "^7.31.10"
+    "eslint-plugin-react": "^7.31.10",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
   },
   "husky": {
     "hooks": {
