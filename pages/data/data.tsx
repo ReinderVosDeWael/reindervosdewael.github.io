@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 import React from 'react';
 import {
   HiAcademicCap,
@@ -297,8 +298,8 @@ export const contactData = {
       <p>
         Want to get in touch? I can often make time for a quick chat
         about anything and everything. You can reach me via LinkedIn and e-mail,
-        (see socials in the footer), though you'll probably get the quickest
-        response via
+        (see socials in the footer), though you&apos;ll probably get the 
+        quickest response via
         e-mail. For inquiries related to my work at Ordina please contact me at
         my{' '}
         <a href="mailto:reinder.vos.de.wael@ordina.nl">Ordina e-mail address</a>
