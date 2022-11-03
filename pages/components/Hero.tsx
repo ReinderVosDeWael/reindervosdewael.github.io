@@ -8,7 +8,6 @@ import {BiChevronDownCircle} from 'react-icons/bi';
 import {IconContext} from 'react-icons';
 import Div100vh from 'react-div-100vh';
 
-
 /**
  * Creates the hero image.
  * @return {Component}
@@ -20,32 +19,28 @@ const Hero = function() {
   // const actions = heroData['actions']; // TODO
 
   return (
-    <Div100vh className="hero_container" id='hero'>
+    <Div100vh className="hero_container" id="hero">
       <Image
         alt="hero_image"
         className="hero_image"
-        layout="fill"
-        objectFit="cover"
         src={imageSrc}
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: 'cover',
+        }}
       />
       <div className="hero_overlay_container">
         <div className="hero_text_container">
-          <h1 className="hero_text_title">
-            {name}
-          </h1>
-          <h2 className="hero_text_description">
-            {description}
-          </h2>
+          <h1 className="hero_text_title">{name}</h1>
+          <h2 className="hero_text_description">{description}</h2>
         </div>
         <div className="hero_socials">
           <Socials />
         </div>
       </div>
       <div className="hero_links_container">
-        <a
-          aria-label="About"
-          href="#about"
-          key="About">
+        <a aria-label="About" href="#about" key="About">
           <IconContext.Provider value={{size: '40', color: 'white'}}>
             <BiChevronDownCircle />
           </IconContext.Provider>

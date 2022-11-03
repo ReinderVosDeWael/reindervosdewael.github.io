@@ -6,6 +6,7 @@
 .DS_Store
 local
 .next
+.idea
 
 # User-specific files
 *.rsuser

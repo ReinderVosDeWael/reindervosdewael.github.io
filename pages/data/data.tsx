@@ -8,7 +8,7 @@ import {
   HiOfficeBuilding,
   HiSparkles,
 } from 'react-icons/hi';
-import {SiGithub, SiGooglescholar, SiLinkedin} from 'react-icons/si';
+import {SiGithub, SiGmail, SiGooglescholar, SiLinkedin} from 'react-icons/si';
 
 // import brainspaceImage from '/assets/brainspace_logo.png';
 // import brainstatImage from '/assets/brainstat_logo.png';
@@ -224,6 +224,11 @@ export const socialLinks = [
     Icon: SiGooglescholar,
     href: 'https://scholar.google.com/citations?user=nPHuUwwAAAAJ&hl=en',
   },
+  {
+    label: 'E-Mail',
+    Icon: SiGmail,
+    href: 'mailto:reinder.vosdewael@gmail.com',
+  },
 ];
 
 // Certificates
@@ -281,45 +286,27 @@ export const NavbarData = [
     href: '#resume',
   },
   {
-    label: 'Projects',
-    href: '#projects',
+    label: 'Contact',
+    href: '#contact',
   },
 ];
 
-/**
-export const projectsData = {
-  imageSrc: projectsImage,
-  projects: [
-    {
-      name: 'BrainSpace',
-      href: 'https://brainspace.readthedocs.io/en/latest/',
-      role: 'Lead Developer',
-      date: '2019-present',
-      description: 'BrainSpace is awesome.',
-      imageSrc: brainspaceImage,
-      tools: 'Python, MATLAB, Git',
-    },
-    {
-      name: 'Resume website',
-      href: 'https://reindervosdewael.github.io/',
-      role: 'Solo Developer',
-      date: '2022-present',
-      description: `Well... You're looking at it :-).`,
-      imageSrc: heroImage,
-      tools: 'Typescript, CSS, React, Git',
-    },
-    {
-      name: 'BrainStat',
-      href: 'https://brainstat.readthedocs.io/en/latest/',
-      role: 'Lead Developer',
-      date: '2020-2022',
-      description: `BrainStat is also awesome.`,
-      imageSrc: brainstatImage,
-      tools: 'Python, MATLAB, Git',
-    },
-  ],
+export const contactData = {
+  description: (
+    <>
+      <p>
+        Want to get in touch? I can often make time for a quick chat
+        about anything and everything. You can reach me via LinkedIn and e-mail,
+        (see socials in the footer), though you'll probably get the quickest
+        response via
+        e-mail. For inquiries related to my work at Ordina please contact me at
+        my{' '}
+        <a href="mailto:reinder.vos.de.wael@ordina.nl">Ordina e-mail address</a>
+      </p>
+    </>
+  ),
+
 };
- */
 
 export default function placeholder() {
   // Necessary becasue React keeps thinking this is a page.

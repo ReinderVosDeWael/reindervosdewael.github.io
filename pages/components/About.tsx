@@ -12,7 +12,14 @@ const About = function() {
       <div className="base_content about_content">
         <div className="base_content_left about_left">
           <div className="about_profile_image_container">
-            <Image src={profileImageSrc} alt="Profile Image" />
+            <Image
+              src={profileImageSrc}
+              alt="Profile Image"
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
         </div>
 
