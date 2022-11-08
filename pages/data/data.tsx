@@ -275,6 +275,14 @@ export const certificateData = [
     including neural network regression and classification, computer vision, 
     and natural language processing.`,
   },
+  {
+    date: '2022',
+    location: 'Udemy',
+    title: 'The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert',
+    href: 'https://www.udemy.com/certificate/UC-1f2a0709-61a2-47e3-b2e1-5b2aa2bc3868/',
+    content: `This course offers a complete hands-on tutorial on creating and 
+    interacting with mySQL databases.`,
+  },
 ];
 
 export const NavbarData = [
