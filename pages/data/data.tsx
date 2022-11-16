@@ -235,7 +235,7 @@ export const socialLinks = [
 // Certificates
 export const certificateData = [
   {
-    date: '2022 (expires Oct 2023)',
+    date: '2022',
     location: 'Microsoft',
     title: 'Azure Developer Associate (AZ-204)',
     href: 'https://www.credly.com/badges/cc3cb9fc-84ec-40ef-a685-28e13c913621',
@@ -245,6 +245,17 @@ export const certificateData = [
      in all phases of cloud development from requirements definition and 
      design, to development, deployment, and maintenance.
     `,
+  },
+  {
+    date: '2022',
+    location: 'Tensorflow',
+    title: 'Tensorflow Developer Certificate',
+    href: 'https://www.credential.net/7e8fa6a5-a5e3-4248-b878-b58e6740a182#gs.id2ivc',
+    content: `This certificate tests a developer's foundational 
+    knowledge of integrating machine learning into tools and applications. The 
+    certificate program requires an understanding of building TensorFlow models 
+    using Computer Vision, Convolutional Neural Networks, Natural Language 
+    Processing, and real-world image data and strategies.`,
   },
   {
     date: '2022',
