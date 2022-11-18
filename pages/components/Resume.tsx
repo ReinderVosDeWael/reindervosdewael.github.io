@@ -5,8 +5,17 @@ import {experienceData} from '../data/data';
 import {projectsData} from '../data/data';
 import {skillsData} from '../data/data';
 
+interface ResumeData {
+  title: string;
+  location: string;
+  date: string;
+  href?: string;
+  skills?: Array<string>;
+}
+
+
 function createExperienceSection(
-    data: Array<object>,
+    data: Array<ResumeData>,
     title: string,
     addSeparator: boolean,
 ) {
@@ -21,14 +30,6 @@ function createExperienceSection(
       </div>
     </div>
   );
-}
-
-interface ResumeData {
-  title: string;
-  location: string;
-  date: string;
-  href?: string;
-  skills?: Array<string>;
 }
 
 
