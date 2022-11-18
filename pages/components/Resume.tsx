@@ -25,7 +25,7 @@ function createExperienceSection(
         <h1 className="section_title">{title}</h1>
       </div>
       <div className="base_content_right">
-        {data.map((e: object) => createExperienceSectionContent(e))}
+        {data.map((e: ResumeData) => createExperienceSectionContent(e))}
         {addSeparator && <hr className="section_separator" />}
       </div>
     </div>
