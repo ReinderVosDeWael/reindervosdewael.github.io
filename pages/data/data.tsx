@@ -11,10 +11,7 @@ import {
 } from 'react-icons/hi';
 import {SiGithub, SiGmail, SiGooglescholar, SiLinkedin} from 'react-icons/si';
 
-// import brainspaceImage from '/assets/brainspace_logo.png';
-// import brainstatImage from '/assets/brainstat_logo.png';
 import heroImage from '/assets/dalle_hero.png';
-// import projectsImage from '/assets/dalle_projects.png';
 import profileImage from '/assets/profile.png';
 
 // Page Data
@@ -30,8 +27,7 @@ export const heroData = {
   description: (
     <>
       <p>
-        I am a software engineer based in the Netherlands, currently{' '}
-        working at{' '}
+        I am a software engineer based in the Netherlands, currently working at 
         <strong>Ordina</strong> to help bring Python solutions to its customers.
       </p>
       <p>
@@ -287,37 +283,53 @@ export const certificateData = [
   },
 ];
 
-export const NavbarData = [
-  {
-    label: 'About',
-    href: '#about',
-  },
-  {
-    label: 'Resume',
-    href: '#resume',
-  },
-  {
-    label: 'Contact',
-    href: '#contact',
-  },
-];
+const labels = ['About', 'Resume', 'Contact'];
+export const NavbarData = labels.map((x) => ({
+  label: x,
+  href: '#' + x.toLowerCase(),
+}));
 
 export const contactData = {
   description: (
     <>
       <p>
-        Want to get in touch? I can often make time for a quick chat
-        about anything and everything. You can reach me via LinkedIn and e-mail,
-        (see socials in the footer), though you&apos;ll probably get the 
-        quickest response via
-        e-mail. For inquiries related to my work at Ordina please contact me at
-        my{' '}
+        Want to get in touch? I can often make time for a quick chat about
+        anything and everything. You can reach me via LinkedIn and e-mail, (see
+        socials in the footer), though you&apos;ll probably get the quickest
+        response via e-mail. For inquiries related to my work at Ordina please
+        contact me at my{' '}
         <a href="mailto:reinder.vos.de.wael@ordina.nl">Ordina e-mail address</a>
       </p>
     </>
   ),
-
 };
+
+// Experience
+export const projectsData = [
+  {
+    date: '2022 - Present',
+    location: 'Software Engineer',
+    title: 'QuestionMark',
+    content: `As part of my work for Ordina, I assisted QuestionMark with the 
+    maintenance of their web crawlers.`,
+    skills: ['Scrapy', 'HTML', 'JavaScript'],
+  },
+  {
+    date: '2022 - Present',
+    location: 'Software Engineer',
+    title: 'Personal Website',
+    content: `Well... You're looking at it :-).`,
+    skills: ['Typescript', 'HTML', 'CSS', 'React'],
+  },
+  {
+    date: '2020 - Present',
+    location: 'Developer',
+    title: 'BrainSpace',
+    content: `As part of my PhD studies I developed and maintain BrainSpace, a 
+    toolbox for manifold learning of brain connectivity data.`,
+    skills: ['NumPy', 'Git', 'Manifold Learning'],
+  },
+];
 
 export default function placeholder() {
   // Necessary becasue React keeps thinking this is a page.

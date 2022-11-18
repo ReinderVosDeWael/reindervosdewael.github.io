@@ -1,7 +1,8 @@
 import React from 'react';
-import {experienceData} from '../data/data';
-import {educationData} from '../data/data';
 import {certificateData} from '../data/data';
+import {educationData} from '../data/data';
+import {experienceData} from '../data/data';
+import {projectsData} from '../data/data';
 import {skillsData} from '../data/data';
 
 function createExperienceSection(
@@ -22,14 +23,22 @@ function createExperienceSection(
   );
 }
 
-function createExperienceSectionContent(e: object) {
+interface ResumeData {
+  title: string;
+  location: string;
+  date: string;
+  href: string;
+  skills: Array<string>;
+}
+
+
+function createExperienceSectionContent(e: ResumeData) {
   return (
     <div className="resume_right">
       <div className="resume_item" key={e['title']}>
         <h1 className="resume_title">{e['title']}</h1>
         <span className="resume_location">{e['location']}</span>
-        <span> • </span>
-        <span className="resume_date">{e['date']}</span>
+        <span> • {e['date']}</span>
         {'href' in e && (
           <>
             <span> • </span>
@@ -39,6 +48,9 @@ function createExperienceSectionContent(e: object) {
               </a>
             </span>
           </>
+        )}
+        {'skills' in e && (
+          <p className="resume_skills">Skills: {e['skills'].join(' • ')}</p>
         )}
         <p className="resume_description">{e['content']}</p>
       </div>
@@ -50,7 +62,11 @@ function skillsSection() {
   const skills: JSX.Element[][] = [];
   for (let i = 0; i < skillsData.length; i++) {
     const skillSet = skillsData[i];
-    skills.push([<p className="skillset_name" key={i}>{skillSet['name']}</p>]);
+    skills.push([
+      <p className="skillset_name" key={i}>
+        {skillSet['name']}
+      </p>,
+    ]);
     skills.push(
         skillSet['skills'].map(({name, level}, idx) => {
           return skill(name, level, idx);
@@ -71,7 +87,7 @@ function skillsSection() {
 }
 
 function skill(skillName: string, level: number, key, max = 10) {
-  const percentage = Math.round(level / max * 100);
+  const percentage = Math.round((level / max) * 100);
   return (
     <div className="skill_container" key={key}>
       <span className="skill_name">{skillName}</span>
@@ -83,8 +99,13 @@ function skill(skillName: string, level: number, key, max = 10) {
 }
 
 export default function Resume() {
-  const allData = [experienceData, educationData, certificateData];
-  const titles = ['Experience', 'Education', 'Certificates'];
+  const allData = [
+    experienceData,
+    projectsData,
+    educationData,
+    certificateData,
+  ];
+  const titles = ['Experience', 'Projects', 'Education', 'Certificates'];
   const experienceSection: JSX.Element[] = [];
   for (let i = 0; i < allData.length; i++) {
     experienceSection.push(
