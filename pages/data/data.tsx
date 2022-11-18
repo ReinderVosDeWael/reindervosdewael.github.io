@@ -28,7 +28,7 @@ export const heroData = {
     <>
       <p>
         I am a software engineer based in the Netherlands, currently working at 
-        <strong>Ordina</strong> to help bring Python solutions to its customers.
+        Ordina to help bring Python solutions to its customers.
       </p>
       <p>
         In my free time, you can catch me <strong>Bouldering</strong>, building
