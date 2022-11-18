@@ -27,8 +27,8 @@ interface ResumeData {
   title: string;
   location: string;
   date: string;
-  href: string;
-  skills: Array<string>;
+  href?: string;
+  skills?: Array<string>;
 }
 
 
