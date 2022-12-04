@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import {aboutData} from '../data/data';
+import Container from 'react-bootstrap/Container';
+import {Col, Row} from 'react-bootstrap';
 
 const About = function() {
   const profileImageSrc = aboutData['profileImageSrc'];
@@ -9,8 +11,8 @@ const About = function() {
 
   return (
     <div className="about" id="about">
-      <div className="base_content about_content">
-        <div className="base_content_left about_left">
+      <div className="base_content">
+        <div className="base_content_left d-flex align-items-center">
           <div className="about_profile_image_container">
             <Image
               src={profileImageSrc}
@@ -23,23 +25,25 @@ const About = function() {
           </div>
         </div>
 
-        <div className="about_right">
-          <div className="about_title_container">
-            <h1 className="about_title">{aboutData['name']}</h1>
+        <div> {/* About content - right */}
+          <div>
+            <h1 className="text-white"><strong>{aboutData['name']}</strong></h1>
           </div>
-          <div className="about_description">{description}</div>
+          <div className="text-white text-align-justify">{description}</div>
 
-          <div className="about_list_container">
-            <ul className="about_list">
+          <Container className="pb-5 line-height-10rem">
+            <Row sm={1} md={2}>
               {aboutItems.map(({label, text, Icon}, idx) => (
-                <li className="about_list_item" key={idx}>
-                  {Icon && <Icon className="about_icons" />}
-                  <span className="about_labels">{label}:</span>
-                  <span className="about_text">{text}</span>
-                </li>
+                <Col key={idx}>
+                  {Icon && <Icon className="about_icons"/>}
+                  <span
+                    className="p-2 text-white"><strong>{label}:</strong></span>
+                  <span style={{color: '#d1d5db'}}>{text}</span>
+                </Col>
+
               ))}
-            </ul>
-          </div>
+            </Row>
+          </Container>
         </div>
       </div>
     </div>

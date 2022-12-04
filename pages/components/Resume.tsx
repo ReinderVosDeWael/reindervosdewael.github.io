@@ -1,9 +1,11 @@
 import React from 'react';
-import {certificateData} from '../data/data';
-import {educationData} from '../data/data';
-import {experienceData} from '../data/data';
-import {projectsData} from '../data/data';
-import {skillsData} from '../data/data';
+import {
+  certificateData,
+  educationData,
+  experienceData,
+  projectsData,
+  skillsData,
+} from '../data/data';
 
 interface ResumeData {
   title: string;
@@ -26,7 +28,7 @@ function createExperienceSection(
       </div>
       <div className="base_content_right">
         {data.map((e: ResumeData) => createExperienceSectionContent(e))}
-        {addSeparator && <hr className="section_separator" />}
+        {addSeparator && <hr className="section_separator"/>}
       </div>
     </div>
   );
@@ -35,10 +37,10 @@ function createExperienceSection(
 
 function createExperienceSectionContent(e: ResumeData) {
   return (
-    <div className="resume_right">
-      <div className="resume_item" key={e['title']}>
-        <h1 className="resume_title">{e['title']}</h1>
-        <span className="resume_location">{e['location']}</span>
+    <div>
+      <div className="pb-1" key={e['title']}>
+        <h4>{e['title']}</h4>
+        <span><i>{e['location']}</i></span>
         <span> • {e['date']}</span>
         {'href' in e && (
           <>
@@ -53,20 +55,20 @@ function createExperienceSectionContent(e: ResumeData) {
         {'skills' in e && (
           <p className="resume_skills">Skills: {e['skills'].join(' • ')}</p>
         )}
-        <p className="resume_description">{e['content']}</p>
+        <p className="text-align-justify">{e['content']}</p>
       </div>
     </div>
   );
 }
 
-function skillsSection() {
+function SkillsSection() {
   const skills: JSX.Element[][] = [];
   for (let i = 0; i < skillsData.length; i++) {
     const skillSet = skillsData[i];
     skills.push([
-      <p className="skillset_name" key={i}>
-        {skillSet['name']}
-      </p>,
+      <h5 className="d-inline-block pt-3" key={i}>
+        <strong>{skillSet['name']}</strong>
+      </h5>,
     ]);
     skills.push(
         skillSet['skills'].map(({name, level}, idx) => {
@@ -90,10 +92,10 @@ function skillsSection() {
 function skill(skillName: string, level: number, key, max = 10) {
   const percentage = Math.round((level / max) * 100);
   return (
-    <div className="skill_container" key={key}>
-      <span className="skill_name">{skillName}</span>
+    <div className="flex-column" key={key}>
+      <span className="ms-3">{skillName}</span>
       <div className="skill_bottom_bar">
-        <div className="skill_top_bar" style={{width: `${percentage}%`}} />
+        <div className="skill_top_bar" style={{width: `${percentage}%`}}/>
       </div>
     </div>
   );
@@ -116,7 +118,7 @@ export default function Resume() {
   return (
     <div className="resume" id="resume">
       {experienceSection}
-      {skillsSection()}
+      <SkillsSection/>
     </div>
   );
 }

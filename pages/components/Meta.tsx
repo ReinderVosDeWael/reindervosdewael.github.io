@@ -27,7 +27,6 @@ export default function Meta() {
       />
       <link rel="icon" href="/favicon.ico" key="favicon" />
 
-      {/* Twitter: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup */}
       <meta
         content={metaData['title']}
         name="twitter:title"

@@ -4,11 +4,11 @@ import Socials from './Socials';
 const Footer = function() {
   return (
     <div className="footer" id="footer">
-      <div className="footer_socials">
+      <div className="d-flex gap-5 justify-content-center">
         <Socials/>
       </div>
-      <div className="footer_text">
-        Source code of this website is available on my Github.
+      <div className="d-flex pt-3 justify-content-center">
+        <small>Source code of this website is available on my Github.</small>
       </div>
     </div>
   );

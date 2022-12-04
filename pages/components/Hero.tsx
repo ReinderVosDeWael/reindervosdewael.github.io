@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 // import classNames from 'classnames';
-
 import {heroData} from '../data/data';
 import Socials from './Socials';
 import {BiChevronDownCircle} from 'react-icons/bi';
@@ -19,10 +18,10 @@ const Hero = function() {
   // const actions = heroData['actions']; // TODO
 
   return (
-    <Div100vh className="hero_container" id="hero">
+    <Div100vh className="d-flex justify-content-center align-items-center"
+      id="hero">
       <Image
         alt="hero_image"
-        className="hero_image"
         src={imageSrc}
         fill
         sizes="100vw"
@@ -30,19 +29,22 @@ const Hero = function() {
           objectFit: 'cover',
         }}
       />
-      <div className="hero_overlay_container">
-        <div className="hero_text_container">
-          <h1 className="hero_text_title">{name}</h1>
-          <h2 className="hero_text_description">{description}</h2>
+      <div
+        className="hero_overlay_container">
+        <div className="position-relative" style={{fontSize: '1.1rem'}}>
+          <h1><strong>{name}</strong></h1>
+          {description}
         </div>
-        <div className="hero_socials">
-          <Socials />
+        <div className="d-flex gap-5 pt-3">
+          <Socials/>
         </div>
       </div>
-      <div className="hero_links_container">
+      <div
+        className="d-flex justify-content-center position-absolute"
+        style={{bottom: '3%'}}>
         <a aria-label="About" href="#about" key="About">
           <IconContext.Provider value={{size: '40', color: 'white'}}>
-            <BiChevronDownCircle />
+            <BiChevronDownCircle/>
           </IconContext.Provider>
         </a>
       </div>

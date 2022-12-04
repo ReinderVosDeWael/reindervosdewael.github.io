@@ -8,9 +8,9 @@ import Navbar from './components/Navbar';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
 
-export default function Home() {
+function Home() {
   return (
-    <div className="container">
+    <div>
       <Meta/>
       <Navbar/>
       <Hero/>
@@ -21,3 +21,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

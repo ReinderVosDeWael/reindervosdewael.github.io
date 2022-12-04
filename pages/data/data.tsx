@@ -27,7 +27,7 @@ export const heroData = {
   description: (
     <>
       <p>
-        I am a software engineer based in the Netherlands, currently working at 
+        I am a software engineer based in the Netherlands, currently working at
         Ordina to help bring Python solutions to its customers.
       </p>
       <p>
@@ -282,12 +282,6 @@ export const certificateData = [
     interacting with mySQL databases.`,
   },
 ];
-
-const labels = ['About', 'Resume', 'Contact'];
-export const NavbarData = labels.map((x) => ({
-  label: x,
-  href: '#' + x.toLowerCase(),
-}));
 
 export const contactData = {
   description: (
