@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "husky": "^8.0.2",
     "next": "latest",
     "react": "latest",
     "react-bootstrap": "^2.6.0",
@@ -25,11 +26,6 @@
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.31.11",
     "lint-staged": "^13.0.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{js,jsx}": [
