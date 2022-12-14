@@ -53,16 +53,21 @@ a {
 
 .base_content {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 8fr;
     row-gap: 1rem;
     width: 85%;
     margin: auto;
     max-width: var(--max_width);
 }
 
+@media (max-width: 768px) {
+    .base_content {
+        grid-template-columns: 1fr;
+    }
+}
+
 .base_content_left {
     min-width: 10rem;
-    max-width: 10rem;
 }
 
 .base_content_right {
@@ -74,6 +79,7 @@ a {
 .about_profile_image_container {
     overflow: hidden;
     position: relative;
+    min-width: 2rem;
     width: 8rem;
     height: 8rem;
     border-radius: 20rem;
