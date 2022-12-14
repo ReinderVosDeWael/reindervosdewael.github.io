@@ -19,7 +19,8 @@ const ProfilePic = () => {
   const profileImageSrc = aboutData['profileImageSrc'];
   return (
     <div
-      className="base_content_left d-flex align-items-center justify-content-center">
+      className="base_content_left d-flex
+      align-items-center justify-content-center">
       <div className="about_profile_image_container">
         <Image
           src={profileImageSrc}
