@@ -27,8 +27,10 @@ export const heroData = {
   description: (
     <>
       <p>
-        I am a software engineer based in the Netherlands, currently working at
-        Ordina to help bring Python solutions to its customers.
+        As a software engineer at Ordina, I am dedicated to delivering
+        high-quality Python solutions that bring value to our customers. In my
+        role, I work closely with clients to understand their needs and develop
+        solutions that meet their unique challenges and goals.
       </p>
       <p>
         In my free time, you can catch me <strong>Bouldering</strong>, building
@@ -62,16 +64,16 @@ export const aboutData = {
   description: (
     <>
       <p>
-        {`I love solving analytical problems. I leverage 
-  statistical and computational models to solve complex challenges. To 
-  accomplish this, I combine statistics, machine learning, and 
-  domain-specific knowledge for a targetted solution.`}
+        I am skilled at solving analytical problems using a combination of
+        statistical and computational models. I draw on my expertise in
+        statistics, machine learning, and domain-specific knowledge to deliver
+        targeted solutions to complex challenges.
       </p>
       <p>
-        {`I have had the privilege of graduating with a PhD in Neuroscience 
-  from McGill University. During this PhD I've had extensive experience with 
-  software development and deployment, creating and testing novel hypotheses
-  in a fast-moving scientific field.`}
+        I am a graduate of McGill University, where I earned a PhD in
+        Neuroscience. During my time in this program, I gained extensive
+        experience in software development, and had the opportunity to create
+        and test novel hypotheses in a fast-paced scientific field.
       </p>
     </>
   ),
@@ -100,7 +102,7 @@ export const skillsData = [
         level: 9,
       },
       {
-        name: 'Shell',
+        name: 'Bash',
         level: 6,
       },
       {
@@ -122,7 +124,7 @@ export const skillsData = [
       },
       {
         name: 'Tensorflow',
-        level: 5,
+        level: 6,
       },
     ],
   },
@@ -131,15 +133,15 @@ export const skillsData = [
     skills: [
       {
         name: 'Git',
-        level: 6,
+        level: 7,
       },
       {
         name: 'Continuous Integration',
-        level: 5,
+        level: 6,
       },
       {
         name: 'Azure',
-        level: 3,
+        level: 5,
       },
     ],
   },
@@ -189,18 +191,21 @@ export const experienceData = [
     date: '2022 - Present',
     location: 'Ordina',
     title: 'Software Engineer',
-    content: `As a member of the Pythoneers team, my goal is to help Ordina's 
-      customers get the most out of their Python codebase.`,
+    content: `As a software engineer at Ordina, I am dedicated to delivering 
+    high-quality Python solutions that bring value to our customers. In my 
+    role, I work closely with clients to understand their needs and develop 
+    custom solutions that meet their unique challenges and goals.`,
   },
   {
     date: '2017 - 2022',
     location: 'McGill University',
     title: 'PhD Candidate',
-    content: `My PhD work focussed on the use of statistical methods and 
-    machine learning for the understanding of the human brain. This work led to 
-      scientific advances in our understanding of the connections of the 
-      temporal lobe, as well as open-source toolboxes that allow other 
-      researchers to use advanced statistical and manifold learning methods.`,
+    content: `During my PhD, I focused on the application of statistical 
+    methods and machine learning to improve our understanding of the human 
+    brain. This work resulted in scientific advances in the field, 
+    including new insights into the connections of the temporal 
+    lobe, as well as the development of open-source toolboxes that enable other 
+    researchers to use advanced statistical and manifold learning methods.`,
   },
 ];
 
@@ -255,15 +260,6 @@ export const certificateData = [
   },
   {
     date: '2022',
-    location: 'Microsoft',
-    title: 'Azure Fundamentals (AZ-900)',
-    href: 'https://www.credly.com/badges/319adf29-8704-448c-9143-520e8b92f406/public_url',
-    content: `Earners of the Azure Fundamentals certification have demonstrated 
-    foundational level knowledge of cloud services and how those services are 
-    provided with Microsoft Azure.`,
-  },
-  {
-    date: '2022',
     location: 'Security Journey',
     title: 'Green Belt for Python Developer',
     href: 'https://ordina.securityjourney.com/certificates/3afada35-04d0-4efe-a316-1648afa5d772.pdf',
@@ -273,25 +269,17 @@ export const certificateData = [
     of security principles, attacks, tools, and processes, and 3) language 
     specific AppSec knowledge.`,
   },
-  {
-    date: '2022',
-    location: 'Udemy',
-    title: 'The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert',
-    href: 'https://www.udemy.com/certificate/UC-1f2a0709-61a2-47e3-b2e1-5b2aa2bc3868/',
-    content: `This course offers a complete hands-on tutorial on creating and 
-    interacting with mySQL databases.`,
-  },
 ];
 
 export const contactData = {
   description: (
     <>
       <p>
-        Want to get in touch? I can often make time for a quick chat about
-        anything and everything. You can reach me via LinkedIn and e-mail, (see
-        socials in the footer), though you&apos;ll probably get the quickest
-        response via e-mail. For inquiries related to my work at Ordina please
-        contact me at my{' '}
+        If you would like to get in touch, I am happy to have a quick chat
+        about anything and everything. You can reach me via LinkedIn and
+        email (see the links in the footer), but you will likely receive the
+        quickest response via email. For inquiries related to my work at
+        Ordina, please contact me at my{' '}
         <a href="mailto:reinder.vos.de.wael@ordina.nl">Ordina e-mail address</a>
       </p>
     </>
@@ -305,7 +293,8 @@ export const projectsData = [
     location: 'Software Engineer',
     title: 'QuestionMark',
     content: `As part of my work for Ordina, I assisted QuestionMark with the 
-    maintenance of their web crawlers.`,
+    maintenance of their web crawlers. This work involved analyzing failures
+    of the crawlers due to API changes and implementing fixes.`,
     skills: ['Scrapy', 'HTML', 'JavaScript'],
   },
   {
@@ -319,9 +308,10 @@ export const projectsData = [
     date: '2020 - Present',
     location: 'Developer',
     title: 'BrainSpace',
-    content: `As part of my PhD studies I developed and maintain BrainSpace, a 
-    toolbox for manifold learning of brain connectivity data.`,
-    skills: ['NumPy', 'Git', 'Manifold Learning'],
+    content: `As part of my PhD studies I developed and maintained BrainSpace, 
+    a toolbox for manifold learning of brain connectivity data and the 
+    statistical analaysis of these manifolds.`,
+    skills: ['NumPy', 'Git', 'Manifold Learning', 'Non-Parametric Statistics'],
   },
 ];
 
