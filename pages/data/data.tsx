@@ -289,7 +289,7 @@ export const contactData = {
 // Experience
 export const projectsData = [
   {
-    date: '2022 - Present',
+    date: '2022',
     location: 'Software Engineer',
     title: 'QuestionMark',
     content: `As part of my work for Ordina, I assisted QuestionMark with the 
@@ -305,7 +305,7 @@ export const projectsData = [
     skills: ['Typescript', 'HTML', 'CSS', 'React'],
   },
   {
-    date: '2020 - Present',
+    date: '2020 - 2022',
     location: 'Developer',
     title: 'BrainSpace',
     content: `As part of my PhD studies I developed and maintained BrainSpace, 
