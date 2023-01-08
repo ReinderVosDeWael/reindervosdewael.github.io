@@ -136,7 +136,7 @@ export const skillsData = [
         level: 7,
       },
       {
-        name: 'Continuous Integration',
+        name: 'Docker',
         level: 6,
       },
       {
