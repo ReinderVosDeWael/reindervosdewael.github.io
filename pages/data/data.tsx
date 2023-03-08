@@ -289,6 +289,21 @@ export const contactData = {
 // Experience
 export const projectsData = [
   {
+    date: '2022 - Present',
+    location: 'Software Engineer',
+    title: 'Ordina',
+    content: `The Dutch police have a substantial amount of audio data from 
+    criminal investigations. However, identifying unknown speakers in these 
+    files requires significant manual effort. To tackle this issue, I am 
+    collaborating with the Vox team at Ordina to develop a Minimum Viable 
+    Product AI solution that can automatically identify speakers in these files.
+     Our work involves creating a scalable web application that enables 
+     non-experts to generate and compare vocal "fingerprints" extracted 
+     from recordings.`,
+    skills: ['Python', 'FastAPI', 'PyTorch', 'Docker', 'mySQL',
+      'ElasticSearch', 'S3', 'RabbitMQ'],
+  },
+  {
     date: '2022',
     location: 'Software Engineer',
     title: 'QuestionMark',
@@ -310,7 +325,10 @@ export const projectsData = [
     title: 'BrainSpace',
     content: `As part of my PhD studies I developed and maintained BrainSpace, 
     a toolbox for manifold learning of brain connectivity data and the 
-    statistical analaysis of these manifolds.`,
+    statistical analaysis of these manifolds. This toolbox allowed researchers 
+    without significant programming experience to perform advanced statistical
+    procedures. This toolbox has been used in hundreds of scientific papers
+    by researchers around the world.`,
     skills: ['NumPy', 'Git', 'Manifold Learning', 'Non-Parametric Statistics'],
   },
 ];
