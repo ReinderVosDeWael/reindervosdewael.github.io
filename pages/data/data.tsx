@@ -27,10 +27,12 @@ export const heroData = {
   description: (
     <>
       <p>
-        As a scientific software developer at the Child Mind Institute, I am dedicated to delivering
-        high-quality solutions that bring value our research and the clinic. In my
-        role, I work closely with both scientists and medical staff to understand their needs and develop
-        solutions that meet their unique challenges and goals.
+        As a scientific software developer at the Child Mind Institute, 
+        I am dedicated to deliveringhigh-quality solutions that bring 
+        value our research and the clinic. In my role, I work closely
+        with both scientists and medical staff to understand their 
+        needs and developsolutions that meet their unique challenges and 
+        goals.
       </p>
       <p>
         In my free time, you can catch me <strong>Bouldering</strong>, building
