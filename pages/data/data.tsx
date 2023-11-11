@@ -27,9 +27,9 @@ export const heroData = {
   description: (
     <>
       <p>
-        As a software engineer at Ordina, I am dedicated to delivering
-        high-quality Python solutions that bring value to our customers. In my
-        role, I work closely with clients to understand their needs and develop
+        As a scientific software developer at the Child Mind Institute, I am dedicated to delivering
+        high-quality solutions that bring value our research and the clinic. In my
+        role, I work closely with both scientists and medical staff to understand their needs and develop
         solutions that meet their unique challenges and goals.
       </p>
       <p>
@@ -78,7 +78,7 @@ export const aboutData = {
     </>
   ),
   aboutItems: [
-    {label: 'Location', text: 'Gouda, the Netherlands', Icon: HiMap},
+    {label: 'Location', text: 'Montreal, QC, Canada', Icon: HiMap},
     {label: 'Age', text: String(age), Icon: HiCalendar},
     {label: 'Nationality', text: 'Dutch', Icon: HiFlag},
     {
@@ -188,7 +188,15 @@ export const educationData = [
 // Experience
 export const experienceData = [
   {
-    date: '2022 - Present',
+    date: '2023 - Present',
+    location: 'Child Mind Institute',
+    title: 'Scientific Software Developer',
+    content: `In my role as a scientific software developer, I enhance the
+    workflows of researchers and clinical staff at the Child Mind Institute.
+    I specialize in bringing AI tooling to the end-user.`,
+  },
+  {
+    date: '2022 - 2023',
     location: 'Ordina',
     title: 'Software Engineer',
     content: `As a software engineer at Ordina, I am dedicated to delivering 
@@ -302,15 +310,6 @@ export const projectsData = [
      from recordings.`,
     skills: ['Python', 'FastAPI', 'PyTorch', 'Docker', 'mySQL',
       'ElasticSearch', 'S3', 'RabbitMQ'],
-  },
-  {
-    date: '2022',
-    location: 'Software Engineer',
-    title: 'QuestionMark',
-    content: `As part of my work for Ordina, I assisted QuestionMark with the 
-    maintenance of their web crawlers. This work involved analyzing failures
-    of the crawlers due to API changes and implementing fixes.`,
-    skills: ['Scrapy', 'HTML', 'JavaScript'],
   },
   {
     date: '2022 - Present',
