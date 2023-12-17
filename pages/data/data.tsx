@@ -289,8 +289,8 @@ export const contactData = {
         about anything and everything. You can reach me via LinkedIn and
         email (see the links in the footer), but you will likely receive the
         quickest response via email. For inquiries related to my work at
-        Ordina, please contact me at my{' '}
-        <a href="mailto:reinder.vos.de.wael@ordina.nl">Ordina e-mail address</a>
+        Child Mind Institute, please contact me at my{' '}
+        <a href="mailto:reinder.vosdewael@childmind.org">Child Mind Institute e-mail address</a>
       </p>
     </>
   ),
