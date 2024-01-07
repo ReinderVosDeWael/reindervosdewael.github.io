@@ -290,7 +290,8 @@ export const contactData = {
         email (see the links in the footer), but you will likely receive the
         quickest response via email. For inquiries related to my work at
         Child Mind Institute, please contact me at my{' '}
-        <a href="mailto:reinder.vosdewael@childmind.org">Child Mind Institute e-mail address</a>
+        <a href="mailto:reinder.vosdewael@childmind.org">
+          Child Mind Institute e-mail address</a>
       </p>
     </>
   ),
