@@ -15,7 +15,6 @@
     "react-bootstrap": "^2.6.0",
     "react-div-100vh": "^0.7.0",
     "react-dom": "latest",
-    "react-helmet": "^6.1.0",
     "react-icons": "^4.6.0"
   },
   "devDependencies": {

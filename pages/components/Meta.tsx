@@ -37,6 +37,8 @@ export default function Meta() {
         name="twitter:description"
         key="twitter_description"
       />
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3320911161905431"
+        crossOrigin="anonymous"></script>
     </Head>
   );
 }
